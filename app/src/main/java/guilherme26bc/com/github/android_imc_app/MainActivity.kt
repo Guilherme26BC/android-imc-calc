@@ -69,7 +69,7 @@ fun IMCScreen(modifier: Modifier = Modifier) {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(160.dp)
+                    .height(180.dp)
                     .background(colorResource(id = R.color.vermelho_fiap))
             ) {
                 Image(
@@ -79,13 +79,7 @@ fun IMCScreen(modifier: Modifier = Modifier) {
                         .size(100.dp)
                         .padding(top = 16.dp)
                 )
-                Text(
-                    text = "Calculadora IMC",
-                    fontSize = 24.sp,
-                    color = Color.White,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(top = 12.dp, bottom = 24.dp)
-                )
+
             }
             // --- formulário
             Column(
@@ -96,90 +90,90 @@ fun IMCScreen(modifier: Modifier = Modifier) {
                 Card(
                     modifier = Modifier
                         .offset(y = (-30).dp)
-                        .fillMaxWidth()
-                        .height(300.dp),
+                        .fillMaxWidth(),
+//                        .height(300.dp),
                     colors = CardDefaults
                         .cardColors(containerColor = Color(0xfff9f6f6)),
                     elevation = CardDefaults.cardElevation(4.dp)
                 ) {
-
-                    Text(
-                        text = "Seus dados",
-                        modifier = Modifier.fillMaxWidth(),
-                        fontSize = 24.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = colorResource(id = R.color.vermelho_fiap),
-                        textAlign = TextAlign.Center
-                    )
-                    Spacer(modifier = Modifier.height(32.dp))
-                    Text(
-                        text = "Seu peso",
-                        modifier = Modifier.padding(bottom = 8.dp),
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.Normal,
-                        color = colorResource(id = R.color.vermelho_fiap)
-                    )
-                    OutlinedTextField(
-                        value = "",
-                        onValueChange = {},
-                        modifier = Modifier.fillMaxWidth(),
-                        placeholder = {
-                            Text(text = "Seu peso em Kg.")
-                        },
-                        colors = OutlinedTextFieldDefaults.colors(
-                            unfocusedBorderColor = colorResource(id = R.color.vermelho_fiap),
-                            focusedBorderColor = colorResource(id = R.color.vermelho_fiap)
-                        ),
-                        shape = RoundedCornerShape(16.dp),
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Text(
-                        text = "Sua altura",
-                        modifier = Modifier.padding(bottom = 8.dp),
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.Normal,
-                        color = colorResource(id = R.color.vermelho_fiap)
-                    )
-                    OutlinedTextField(
-                        value = "",
-                        onValueChange = {},
-                        modifier = Modifier.fillMaxWidth(),
-                        placeholder = {
-                            Text(
-                                text = "Sua altura em cm."
-                            )
-                        },
-                        colors = OutlinedTextFieldDefaults.colors(
-                            unfocusedBorderColor = colorResource(id = R.color.vermelho_fiap),
-                            focusedBorderColor = colorResource(id = R.color.vermelho_fiap)
-                        ),
-                        shape = RoundedCornerShape(16.dp),
-                        keyboardOptions = KeyboardOptions(
-                            keyboardType =
-                                KeyboardType.Decimal
-                        )
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Button(
-                        onClick = {},
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(48.dp),
-                        shape = RoundedCornerShape(16.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor =
-                                colorResource(id = R.color.vermelho_fiap)
-                        )
-                    ) {
+                    Column (modifier = Modifier.padding(24.dp)) {
                         Text(
-                            text = "CALCULAR",
+                            text = "Seus dados",
+                            modifier = Modifier.fillMaxWidth(),
+                            fontSize = 24.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color.White,
-                            fontSize = 14.sp
+                            color = colorResource(id = R.color.vermelho_fiap),
+                            textAlign = TextAlign.Center
                         )
+                        Spacer(modifier = Modifier.height(32.dp))
+                        Text(
+                            text = "Seu peso",
+                            modifier = Modifier.padding(bottom = 8.dp),
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = colorResource(id = R.color.vermelho_fiap)
+                        )
+                        OutlinedTextField(
+                            value = "",
+                            onValueChange = {},
+                            modifier = Modifier.fillMaxWidth(),
+                            placeholder = {
+                                Text(text = "Seu peso em Kg.")
+                            },
+                            colors = OutlinedTextFieldDefaults.colors(
+                                unfocusedBorderColor = colorResource(id = R.color.vermelho_fiap),
+                                focusedBorderColor = colorResource(id = R.color.vermelho_fiap)
+                            ),
+                            shape = RoundedCornerShape(16.dp),
+                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = "Sua altura",
+                            modifier = Modifier.padding(bottom = 8.dp),
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = colorResource(id = R.color.vermelho_fiap)
+                        )
+                        OutlinedTextField(
+                            value = "",
+                            onValueChange = {},
+                            modifier = Modifier.fillMaxWidth(),
+                            placeholder = {
+                                Text(
+                                    text = "Sua altura em cm."
+                                )
+                            },
+                            colors = OutlinedTextFieldDefaults.colors(
+                                unfocusedBorderColor = colorResource(id = R.color.vermelho_fiap),
+                                focusedBorderColor = colorResource(id = R.color.vermelho_fiap)
+                            ),
+                            shape = RoundedCornerShape(16.dp),
+                            keyboardOptions = KeyboardOptions(
+                                keyboardType =
+                                    KeyboardType.Decimal
+                            )
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Button(
+                            onClick = {},
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(48.dp),
+                            shape = RoundedCornerShape(16.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor =
+                                    colorResource(id = R.color.vermelho_fiap)
+                            )
+                        ) {
+                            Text(
+                                text = "CALCULAR",
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White,
+                                fontSize = 14.sp
+                            )
+                        }
                     }
-
                 }
             }
         }
